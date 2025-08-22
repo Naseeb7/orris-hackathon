@@ -1,4 +1,5 @@
 import { Schema, model, models } from "mongoose";
+import "@/models/Task";
 
 const TimeLogSchema = new Schema({
   taskId: { type: Schema.Types.ObjectId, ref: "Task" },

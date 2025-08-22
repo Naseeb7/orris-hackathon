@@ -16,7 +16,7 @@ export default function TaskCard({ task, onTaskUpdated }: TaskCardProps) {
     const start = Date.now() - elapsed;
     const interval = setInterval(() => setElapsed(Date.now() - start), 1000);
     return () => clearInterval(interval);
-  }, [isRunning]);
+  }, [isRunning, elapsed]);
 
   const formatTime = (ms: number) => {
     const totalSec = Math.floor(ms / 1000);
